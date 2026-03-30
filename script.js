@@ -2,7 +2,7 @@
  * Survey Logic — single-page form
  */
 
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby3607822Y182g145288Q5r215113917216695111/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzf8eGqgUe53cybIuOgp21bSg45ov2fYbA6Eu3F4wXhzr0FGm30si2kMIixSqZ3ufzE/exec';
 
 const form = document.getElementById('surveyForm');
 const loadingOverlay = document.getElementById('loadingOverlay');
