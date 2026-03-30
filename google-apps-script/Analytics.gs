@@ -10,8 +10,8 @@
 
 function onOpen() {
   SpreadsheetApp.getUi()
-    .createMenu('📊 Аналитика')
-    .addItem('🚀 Создать полный отчет', 'generateFullDashboard')
+    .createMenu('Аналитика')
+    .addItem('Создать полный отчет', 'generateFullDashboard')
     .addToUi();
 }
 

@@ -165,7 +165,6 @@ function initConditionalLogic() {
 
 // ===== Column Mapping =====
 const COLUMN_MAP = {
-    'q1_class': '1. Класс',
     'q2_age': '2. Возраст',
     'q3_gender': '3. Пол',
     'q4_name': '4. Имя',

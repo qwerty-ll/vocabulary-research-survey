@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анкета — Словарный запас и игровые методы</title>
     <meta name="description" content="Исследование эффективности игровых методов обучения на уроках русского языка">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
 
     <div class="container">
         <div class="progress-wrapper" id="progressWrapper" style="display:none;">
@@ -28,41 +28,23 @@
                     <h1>Исследование словарного запаса</h1>
                     <p class="subtitle">Игровые методы обучения на уроках русского языка</p>
                     <p>Привет! Эта анкета поможет нам узнать, насколько эффективны настольные игры для изучения новых слов на уроках русского языка.</p>
-                    <p>Анкета состоит из 4 блоков и займёт около <strong>7–10 минут</strong>.</p>
-                    <p style="margin-top:8px; font-size:0.82rem; color:var(--text-muted);">Все ответы анонимны. Имя указывается по желанию.</p>
+                    <p>Анкета займёт около <strong>7–10 минут</strong>.</p>
+                    <p style="margin-top:8px; font-size:0.82rem; color:var(--text-3);">Все ответы анонимны. Имя указывается по желанию.</p>
                     <button type="button" class="btn-start" onclick="nextStep()">Начать <span>→</span></button>
                 </div>
             </div>
 
-            <!-- STEP 1: Блок 1 — Общая информация -->
+            <!-- STEP 1: Возраст, Пол, Имя -->
             <div class="step" data-step="1">
                 <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">📋</div>
-                        <h2>Блок 1. Общая информация</h2>
-                    </div>
                     <div class="question-block">
-                        <div class="form-row">
-                            <div class="form-field">
-                                <label for="q1_class">1. Класс</label>
-                                <select class="select-input" id="q1_class" name="q1_class" data-required="true">
-                                    <option value="">Выбери класс</option>
-                                    <option value="1">1</option><option value="2">2</option>
-                                    <option value="3">3</option><option value="4">4</option>
-                                    <option value="5">5</option><option value="6">6</option>
-                                    <option value="7">7</option><option value="8">8</option>
-                                    <option value="9">9</option><option value="10">10</option>
-                                    <option value="11">11</option>
-                                </select>
-                            </div>
-                            <div class="form-field">
-                                <label for="q2_age">2. Возраст</label>
-                                <input type="number" class="text-input" id="q2_age" name="q2_age" placeholder="Например, 14" min="6" max="20" data-required="true">
-                            </div>
+                        <div class="form-field">
+                            <label class="question-label" for="q2_age">1. Возраст</label>
+                            <input type="number" class="text-input" id="q2_age" name="q2_age" placeholder="Например, 14" min="6" max="20" data-required="true">
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">3. Пол</label>
+                        <label class="question-label">2. Пол</label>
                         <div class="radio-group" data-required="true" data-name="q3_gender">
                             <label class="radio-option"><input type="radio" name="q3_gender" value="Женский"><span class="radio-custom"></span><span class="radio-text">Женский</span></label>
                             <label class="radio-option"><input type="radio" name="q3_gender" value="Мужской"><span class="radio-custom"></span><span class="radio-text">Мужской</span></label>
@@ -70,22 +52,17 @@
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">4. Имя <span style="font-weight:400;color:var(--text-muted);font-size:0.82rem;">(по желанию)</span></label>
+                        <label class="question-label">3. Имя <span style="font-weight:400;color:var(--text-3);font-size:0.82rem;">(по желанию)</span></label>
                         <input type="text" class="text-input" name="q4_name" placeholder="Введи своё имя или оставь пустым">
                     </div>
                 </div>
             </div>
 
-            <!-- STEP 2: Блок 2 часть 1 — Q5, Q6 -->
+            <!-- STEP 2: Q5, Q6 -->
             <div class="step" data-step="2">
                 <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">📝</div>
-                        <h2>Блок 2. Вопросы до урока</h2>
-                        <p class="step-desc">Отметь подходящий вариант ответа</p>
-                    </div>
                     <div class="question-block">
-                        <label class="question-label">5. Насколько тебе нравится предмет «русский язык»?</label>
+                        <label class="question-label">4. Насколько тебе нравится предмет «русский язык»?</label>
                         <div class="radio-group" data-required="true" data-name="q5_russian">
                             <label class="radio-option"><input type="radio" name="q5_russian" value="Очень нравится"><span class="radio-custom"></span><span class="radio-text">Очень нравится</span></label>
                             <label class="radio-option"><input type="radio" name="q5_russian" value="Нравится"><span class="radio-custom"></span><span class="radio-text">Нравится</span></label>
@@ -95,7 +72,7 @@
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">6. Считаешь ли ты, что у тебя богатый словарный запас?</label>
+                        <label class="question-label">5. Считаешь ли ты, что у тебя богатый словарный запас?</label>
                         <div class="radio-group" data-required="true" data-name="q6_vocabulary">
                             <label class="radio-option"><input type="radio" name="q6_vocabulary" value="Да, много"><span class="radio-custom"></span><span class="radio-text">Да, знаю много слов</span></label>
                             <label class="radio-option"><input type="radio" name="q6_vocabulary" value="Достаточно"><span class="radio-custom"></span><span class="radio-text">Достаточно</span></label>
@@ -107,15 +84,11 @@
                 </div>
             </div>
 
-            <!-- STEP 3: Блок 2 часть 2 — Q7, Q8, Q9 -->
+            <!-- STEP 3: Q7, Q8, Q9 -->
             <div class="step" data-step="3">
                 <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🎲</div>
-                        <h2>Блок 2. Игры и интерес</h2>
-                    </div>
                     <div class="question-block">
-                        <label class="question-label">7. Как часто ты играешь в настольные игры?</label>
+                        <label class="question-label">6. Как часто ты играешь в настольные игры?</label>
                         <div class="radio-group" data-required="true" data-name="q7_board_games">
                             <label class="radio-option"><input type="radio" name="q7_board_games" value="Каждый день"><span class="radio-custom"></span><span class="radio-text">Каждый день</span></label>
                             <label class="radio-option"><input type="radio" name="q7_board_games" value="Несколько раз в неделю"><span class="radio-custom"></span><span class="radio-text">Несколько раз в неделю</span></label>
@@ -125,7 +98,7 @@
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">8. Играл(а) ли ты когда‑нибудь в языковые / словесные настольные игры?</label>
+                        <label class="question-label">7. Играл(а) ли ты когда‑нибудь в языковые / словесные настольные игры?</label>
                         <p class="question-hint">Например, «Эрудит», «Крокодил», «Кругозор»</p>
                         <div class="radio-group" data-required="true" data-name="q8_language_games">
                             <label class="radio-option"><input type="radio" name="q8_language_games" value="Да"><span class="radio-custom"></span><span class="radio-text">Да</span></label>
@@ -133,7 +106,7 @@
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">9. Насколько тебе было бы интересно изучать новые слова в игровой форме?</label>
+                        <label class="question-label">8. Насколько тебе было бы интересно изучать новые слова в игровой форме?</label>
                         <div class="radio-group" data-required="true" data-name="q9_interest">
                             <label class="radio-option"><input type="radio" name="q9_interest" value="Очень интересно"><span class="radio-custom"></span><span class="radio-text">Очень интересно</span></label>
                             <label class="radio-option"><input type="radio" name="q9_interest" value="Интересно"><span class="radio-custom"></span><span class="radio-text">Интересно</span></label>
@@ -145,15 +118,11 @@
                 </div>
             </div>
 
-            <!-- STEP 4: Блок 2 часть 3 — Q10 -->
+            <!-- STEP 4: Q10 -->
             <div class="step" data-step="4">
                 <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">✏️</div>
-                        <h2>Блок 2. Уроки русского языка</h2>
-                    </div>
                     <div class="question-block">
-                        <label class="question-label">10. Что тебе нравится на уроках русского языка?</label>
+                        <label class="question-label">9. Что тебе нравится на уроках русского языка?</label>
                         <p class="question-hint">Можно выбрать несколько вариантов</p>
                         <div class="checkbox-group" data-required="true" data-name="q10_likes">
                             <label class="checkbox-option"><input type="checkbox" name="q10_likes" value="Анализировать тексты"><span class="checkbox-custom"></span><span class="checkbox-text">Анализировать тексты</span></label>
@@ -171,16 +140,11 @@
                 </div>
             </div>
 
-            <!-- STEP 5: Блок 3 часть 1 — Q11, Q12, Q13 -->
+            <!-- STEP 5: Q11, Q12, Q13 -->
             <div class="step" data-step="5">
                 <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🎯</div>
-                        <h2>Блок 3. Вопросы после урока</h2>
-                        <p class="step-desc">Оцени урок с использованием настольной игры</p>
-                    </div>
                     <div class="question-block">
-                        <label class="question-label">11. Понравился ли тебе урок с использованием элементов настольной игры?</label>
+                        <label class="question-label">10. Понравился ли тебе урок с использованием элементов настольной игры?</label>
                         <div class="radio-group" data-required="true" data-name="q11_lesson">
                             <label class="radio-option"><input type="radio" name="q11_lesson" value="Очень понравился"><span class="radio-custom"></span><span class="radio-text">Очень понравился</span></label>
                             <label class="radio-option"><input type="radio" name="q11_lesson" value="Понравился"><span class="radio-custom"></span><span class="radio-text">Понравился</span></label>
@@ -190,7 +154,7 @@
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">12. Стало ли тебе интересно учить новые слова после игры?</label>
+                        <label class="question-label">11. Стало ли тебе интересно учить новые слова после игры?</label>
                         <div class="radio-group" data-required="true" data-name="q12_new_words">
                             <label class="radio-option"><input type="radio" name="q12_new_words" value="Да, интересно"><span class="radio-custom"></span><span class="radio-text">Да, интересно</span></label>
                             <label class="radio-option"><input type="radio" name="q12_new_words" value="Немного интересно"><span class="radio-custom"></span><span class="radio-text">Немного интересно</span></label>
@@ -199,7 +163,7 @@
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">13. Чувствуешь ли ты, что запомнил(а) новые слова благодаря игре?</label>
+                        <label class="question-label">12. Чувствуешь ли ты, что запомнил(а) новые слова благодаря игре?</label>
                         <div class="radio-group" data-required="true" data-name="q13_memorized">
                             <label class="radio-option"><input type="radio" name="q13_memorized" value="Да"><span class="radio-custom"></span><span class="radio-text">Да</span></label>
                             <label class="radio-option"><input type="radio" name="q13_memorized" value="Немного"><span class="radio-custom"></span><span class="radio-text">Немного</span></label>
@@ -210,15 +174,11 @@
                 </div>
             </div>
 
-            <!-- STEP 6: Блок 3 часть 2 — Q14, Q15, Q16 -->
+            <!-- STEP 6: Q14, Q15, Q16 -->
             <div class="step" data-step="6">
                 <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">💬</div>
-                        <h2>Блок 3. Впечатления от игры</h2>
-                    </div>
                     <div class="question-block">
-                        <label class="question-label">14. Насколько было легко понимать правила игры?</label>
+                        <label class="question-label">13. Насколько было легко понимать правила игры?</label>
                         <div class="radio-group" data-required="true" data-name="q14_rules">
                             <label class="radio-option"><input type="radio" name="q14_rules" value="Очень легко"><span class="radio-custom"></span><span class="radio-text">Очень легко</span></label>
                             <label class="radio-option"><input type="radio" name="q14_rules" value="Легко"><span class="radio-custom"></span><span class="radio-text">Легко</span></label>
@@ -228,25 +188,21 @@
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">15. Какие моменты игры тебе понравились больше всего? <span style="font-weight:400;color:var(--text-muted);font-size:0.82rem;">(необязательно)</span></label>
+                        <label class="question-label">14. Какие моменты игры тебе понравились больше всего? <span style="font-weight:400;color:var(--text-3);font-size:0.82rem;">(необязательно)</span></label>
                         <textarea class="text-area" name="q15_favorites" placeholder="Напиши, что запомнилось…"></textarea>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">16. Что бы ты изменил(а) в этой игре, чтобы она стала ещё интереснее? <span style="font-weight:400;color:var(--text-muted);font-size:0.82rem;">(необязательно)</span></label>
+                        <label class="question-label">15. Что бы ты изменил(а) в этой игре, чтобы она стала ещё интереснее? <span style="font-weight:400;color:var(--text-3);font-size:0.82rem;">(необязательно)</span></label>
                         <textarea class="text-area" name="q16_changes" placeholder="Напиши свои идеи…"></textarea>
                     </div>
                 </div>
             </div>
 
-            <!-- STEP 7: Блок 3 часть 3 — Q17, Q18 -->
+            <!-- STEP 7: Q17, Q18 -->
             <div class="step" data-step="7">
                 <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">💡</div>
-                        <h2>Блок 3. Идеи и комментарии</h2>
-                    </div>
                     <div class="question-block">
-                        <label class="question-label">17. Появились ли у тебя идеи, как можно учить новые слова самостоятельно в игровой форме?</label>
+                        <label class="question-label">16. Появились ли у тебя идеи, как можно учить новые слова самостоятельно в игровой форме?</label>
                         <div class="radio-group" data-required="true" data-name="q17_ideas">
                             <label class="radio-option"><input type="radio" name="q17_ideas" value="Да"><span class="radio-custom"></span><span class="radio-text">Да</span></label>
                             <label class="radio-option"><input type="radio" name="q17_ideas" value="Нет"><span class="radio-custom"></span><span class="radio-text">Нет</span></label>
@@ -257,38 +213,33 @@
                         </div>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">18. Есть ли что‑то ещё, что хочешь сказать про урок или игру? <span style="font-weight:400;color:var(--text-muted);font-size:0.82rem;">(необязательно)</span></label>
+                        <label class="question-label">17. Есть ли что‑то ещё, что хочешь сказать про урок или игру? <span style="font-weight:400;color:var(--text-3);font-size:0.82rem;">(необязательно)</span></label>
                         <textarea class="text-area" name="q18_comments" placeholder="Любые мысли и впечатления…"></textarea>
                     </div>
                 </div>
             </div>
 
-            <!-- STEP 8: Блок 4 — Тест на словарный запас -->
+            <!-- STEP 8: Test Q19-Q23 -->
             <div class="step" data-step="8">
                 <div class="step-card">
-                    <div class="step-header">
-                        <div class="step-icon">🧠</div>
-                        <h2>Блок 4. Мини‑тест на словарный запас</h2>
-                        <p class="step-desc">Ответь на вопросы — это займёт около 5 минут</p>
-                    </div>
                     <div class="question-block">
-                        <label class="question-label">19. Подбери антоним (противоположное по значению слово) к слову «радостный»</label>
+                        <label class="question-label">18. Подбери антоним (противоположное по значению слово) к слову «радостный»</label>
                         <input type="text" class="text-input" name="q19_antonym" placeholder="Введи слово…" data-required="true">
                     </div>
                     <div class="question-block">
-                        <label class="question-label">20. Напиши 3 слова, которые относятся к теме «климат»</label>
+                        <label class="question-label">19. Напиши 3 слова, которые относятся к теме «климат»</label>
                         <input type="text" class="text-input" name="q20_climate" placeholder="Например: дождь, …" data-required="true">
                     </div>
                     <div class="question-block">
-                        <label class="question-label">21. Вставь пропущенное слово: «Весной в саду распустились красивые ___»</label>
+                        <label class="question-label">20. Вставь пропущенное слово: «Весной в саду распустились красивые ___»</label>
                         <input type="text" class="text-input" name="q21_missing" placeholder="Введи слово…" data-required="true">
                     </div>
                     <div class="question-block">
-                        <label class="question-label">22. Объясни коротко значение слова «усердие»</label>
+                        <label class="question-label">21. Объясни коротко значение слова «усердие»</label>
                         <textarea class="text-area" name="q22_meaning" placeholder="Напиши определение своими словами…" data-required="true" style="min-height:60px;"></textarea>
                     </div>
                     <div class="question-block">
-                        <label class="question-label">23. Выбери подходящее слово, пропущенное в пословице: «___ учиться — всегда пригодится»</label>
+                        <label class="question-label">22. Выбери подходящее слово, пропущенное в пословице: «___ учиться — всегда пригодится»</label>
                         <div class="radio-group" data-required="true" data-name="q23_proverb">
                             <label class="radio-option"><input type="radio" name="q23_proverb" value="А) Математике"><span class="radio-custom"></span><span class="radio-text">А) Математике</span></label>
                             <label class="radio-option"><input type="radio" name="q23_proverb" value="Б) Грамоте"><span class="radio-custom"></span><span class="radio-text">Б) Грамоте</span></label>
@@ -309,7 +260,7 @@
                 </div>
             </div>
 
-            <!-- Navigation Buttons -->
+            <!-- Navigation -->
             <div class="nav-buttons" id="navButtons">
                 <button type="button" class="btn btn-secondary" id="btnPrev" onclick="prevStep()" style="display:none;"><span class="btn-arrow">←</span> Назад</button>
                 <button type="button" class="btn btn-primary" id="btnNext" onclick="nextStep()" style="display:none;">Далее <span class="btn-arrow">→</span></button>
@@ -323,6 +274,6 @@
         <p>Отправляем твои ответы…</p>
     </div>
 
-    <script src="script.js?v=1"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
